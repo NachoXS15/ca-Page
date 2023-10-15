@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import "bootswatch/dist/vapor/bootstrap.min.css";
+import React from "react";
+import "bootswatch/dist/litera/bootstrap.min.css";
 import './App.css'
-
+import Header from "./components/Header";
+import Router from "./routes/routes";
+import { BrowserRouter } from "react-router-dom";
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <button className='btn btn-primary'></button>
+      <BrowserRouter>
+        <Header>
+          <Router/>
+        </Header>
+      </BrowserRouter>
     </>
   )
 }
